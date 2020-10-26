@@ -1,0 +1,67 @@
+$bgcolor lightblue;
+$textcolorgreen;
+$fontsize 18px;
+$colors red,yellow,green;
+$i 1;
+$h 200px;
+$w 200px;
+
+@each $color in $colors {
+  .div-#{$i} {
+  background-color$color;
+  height$h$i;
+  width$w$i;
+  positionrelative;
+  top$i100;
+  border-radius 1px;
+  left 60 $i;
+}
+$i $i+3;
+}
+.button{
+  border 2px dashed green;
+  margin 20px;
+}
+
+
+
+.primary{
+  @extend .button;
+  color red;
+}
+
+
+ Use the variables 
+body {
+  background-color $bgcolor;
+  color $textcolor;
+  font-size $fontsize;
+}
+
+ html of this 
+!DOCTYPE html
+html
+link rel=stylesheet href=..cssfirst.css
+body
+
+h1Hello Worldh1
+
+pThis is a paragraph.p
+
+div class=div-1
+    1
+    div class=div-4
+        2
+        div class=div-7
+            3
+            
+        div
+    div
+div
+
+button class=primaryCLICKbutton
+
+
+body
+html
+

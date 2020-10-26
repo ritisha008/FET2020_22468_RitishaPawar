@@ -1,0 +1,45 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+   <canvas id = "my_canvas"
+           height = "200"
+           width = "200">
+     <p>Canvas not supported</p>
+   </canvas>
+   <img class = "hidden"
+        id = "flower"
+        src = "flower.jpg"
+        alt = "flower pic of me" 
+        width="200" height="200"/>
+        <script>
+           var canvas = document.getElementById('my_canvas');
+
+//Get a 2D drawing context for the canvas.
+var context = canvas.getContext('2d');
+
+//The path to the image that we want to add.
+var imgPath = 'flower.jpg';
+
+//Create a new Image object.
+var imgObj = new Image();
+
+//Set the src of this Image object.
+imgObj.src = imgPath;
+
+//the x coordinates
+var x = 1;
+
+//the y coordinates
+var y =1;
+
+//When our image has loaded.
+imgObj.onload = function(){
+    //Draw the image onto the canvas.
+    context.drawImage(imgObj, x, y);
+}
+        </script>
+    </body>
+</html>

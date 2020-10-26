@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="js_form.css">
+    <script src="js_form.js">
+
+    </script>
+</head>
+<body onload="timer()">
+
+    
+    <div>
+
+        <span id="timeSpan" style="float: right;"> </span>
+            <span id="browserSpan" style="float: right;">   </span>
+                <form action="welcome.html">
+
+
+                    <table id="tab">
+
+                        <tr>
+                            <td>
+                                <label for="Fname">FIRST NAME::
+
+                                </label>
+                            </td>
+<td>
+                            <input type="text" id="Fname">
+                        </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label for="Lname">LAST NAME::
+
+                                </label>
+                            </td>
+                               <td>
+                            <input type="text" id="Lname">
+                        </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <label for="dob">DOB::
+
+                                </label>
+                            </td>
+                            <td>
+                                
+                            <input type="text" id="dob" placeholder="DD-MM-YYYY" oninput="DateValidate()">
+                            <span id="sp1"> 
+
+                            </span>
+
+                            
+                        </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <label for="Email">Email::
+
+                                </label>
+                            </td>
+                            <td>
+                                
+                            <input type="email" id="email">
+                            
+                        </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>
+
+                                <label for="check">
+                                    HOBBY::
+                                </label>
+                            </td>
+                            <td>
+                                <label for="read">
+                                    READING
+                                </label>
+                                <input type="checkbox" id="raed" value="1" name="check" onclick="displayWrite()">
+                                <br>
+
+                                <label for="write">
+                                    WRITING
+                                </label>
+                                <input type="checkbox" id="write" value="2" name="check" onclick="displayWrite()">
+                                <br>
+
+                                <label for="dance">
+                                    DANCING
+                                </label>
+                                <input type="checkbox" id="dance" value="3" name="check" onclick="displayWrite()">
+                                <br>
+                            </td>
+                        </tr>
+
+                        <tr id="writer">
+                            <td>
+                                <label for="Writer">
+                                    FAVORITE WRITER::
+                                    </label>
+                                    
+                             </td>
+                             <td>
+                                 <input type="text" id="Writer">
+                             </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <button type="button" id="btn1" onclick="checkRequired()">SUBMIT</button>
+                                <button type="submit" id="btn2">Submit</button>
+                            </td>
+                            <td>
+                                <br>
+                                <br>
+
+                                <button type="reset">Clear</button>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </form>
+
+           
+    </div>
+</body>
+</html>

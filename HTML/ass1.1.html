@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <titile>
+          <h2>  Registration Form</titile></h2>
+        </titile>
+
+        <style   type="text/css">
+            input{
+                width: 190px;
+                vertical-align: top;align-self: center;
+                background-color: chocolate;
+                
+                
+            }
+
+            .form {
+		margin: 0 auto;
+        width: 370px;
+        background-color: grey;
+	}
+    .frontline{
+        margin-left: 0;
+        text-align: left;
+
+    }
+    body{
+        background-color: bisque;
+
+    }
+    
+
+        </style>
+
+
+<script language='javascript' type='text/javascript'>
+    function check(input) {
+        if (input.value != document.getElementById('password').value) {
+            input.setCustomValidity('Password Must be Matching.');
+        } else {
+            // input is valid -- reset the error message
+            input.setCustomValidity('');
+        }
+    }
+</script>
+    </head>
+
+    <body align="center" class="frontline">
+
+        <fieldset>
+            <legend>
+                FILL THE FORM
+            </legend>
+        
+        <form>
+
+               <label>
+                NAME::<input type ="text" id="fname" placeholder="FIRST NAME" required>
+                <input type ="text" id="mname" required>
+                <input type ="text" id="lname" required><br><br>
+                 </label>
+
+                 <label>
+                   PHONE NUMBER ::<input type="tel" id="pnumber" required><br><br>
+                </label>
+              <label>
+                AADRESS::<input type="text" id="address" required><br><br>
+
+              </label> 
+
+              <label>
+
+               DOJ:: <input type="date" name="birthday" /><br><br>
+              </label>
+                <label>
+                    USERNAME::<input type="email" id="email" required><br><br>
+                </label>
+                <label>
+                    PASSWORD::<input type="password" id="password" required><br><br>
+                </label>
+                <label>
+                    CONFIRM PASSWORD::<input type="password" id="cpassword" required oninput="check(this)"><br><br>
+                </label>
+                <label>
+                    GENDER::<select name="gender" style="background-color: chocolate;">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="unknown">Don't wanna share</option>
+                    </select>
+                </label><br><br>
+<label>
+                <input type="submit" />
+            </label><br>
+
+
+        </form>
+
+        <details>
+            <summary class="quick">
+              DISCOUNT OFFERED
+            </summary>
+        <ul>
+            <li>
+                no cost EMI
+            </li>
+            <li>
+                upto 50% off
+            </li>
+        </ul>
+        </details>
+
+    </fieldset>
+    </body>
+</html>

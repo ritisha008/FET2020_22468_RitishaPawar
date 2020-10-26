@@ -1,0 +1,43 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <button id="button1" type="button" onclick="buttonSelectEvenRows()">SELECT 1st PARA FROM DIV</button>
+        <button id="button1" type="button" onclick="buttonSelectAllRows()">SELECT ALL PARA FROM DIV</button>
+      
+
+        <div>
+            <p>
+                PARA IN DIV
+            </p>
+        </div>
+            <div>
+                <p>
+                    PARA IN DIV1
+                </p>
+                </div>
+
+                <p>
+                    single para
+                </p>
+   
+
+    <script type="text/javascript">
+
+    function buttonSelectEvenRows() {
+        var p=document.querySelector("p");
+       p.style.color="red";
+    }
+
+    
+
+    function buttonSelectAllRows()
+    {
+        var selectrow=document.querySelectorAll("div >p");
+        for(var i=0;i<selectrow.length;i++)
+        selectrow[i].style.color='pink';
+    }
+    </script>
+     </body>
+</html>

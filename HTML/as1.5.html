@@ -1,0 +1,35 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <canvas id="canvas" width="200" height="200"></canvas>
+
+        <script>
+            var canvas = document.getElementById("canvas");
+            var pen= canvas.getContext('2d');
+pen.fillStyle="yellow";
+pen.beginPath();
+
+pen.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+pen.fill();
+pen.moveTo(110, 75);
+pen.arc(75, 75, 35, 0, Math.PI, false);  // Mouth (clockwise)
+pen.moveTo(65, 65);
+pen.stroke();
+pen.closePath();
+pen.beginPath();
+pen.fillStyle="red";
+pen.arc(60, 65, 5, 0, Math.PI * 2, true); 
+pen.fill(); // Left eye
+pen.moveTo(95, 65);
+pen.stroke();
+pen.closePath();
+pen.beginPath();
+pen.fillStyle="red";
+pen.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
+pen.fill();
+pen.stroke();
+</script>
+    </body>
+</html>

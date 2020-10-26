@@ -1,0 +1,123 @@
+<html>
+<script>
+  
+
+  class point{
+
+    constructor(x,y){
+        this.x=x;
+        this.y=y;
+    }
+
+      /*show(){
+        return 'point are::' + this.x +" ,"+this.y;
+      }*/
+  }
+ class shape extends point{
+    
+
+    constructor(x,y,edges){
+        super(x,y);
+        this.edges=edges;
+
+    }
+
+    perimeter(){
+        console.log("perimeter")
+    }
+
+    area(){
+        console.log("area");
+    }
+}
+
+class triangle extends shape{
+
+    constructor(x,y,edges,name){
+        super(x,y,edges);
+        this.name=name;
+    }
+
+    area(){
+
+        var area= (this.x*this.y)/2;
+        console.log(area);
+        return area;
+       
+    }
+
+         perimeter(){
+
+
+            var perimeter =2*(this.x+this.y);
+            console.log(perimeter);
+            return perimeter;
+         }
+}
+
+class rectangle extends shape{
+
+constructor(x,y,edges,name){
+    super(x,y,edges);
+    this.name=name;
+}
+
+area(){
+
+    var area= this.x*this.y;
+    return area;
+    
+}
+
+perimeter(){
+
+
+var perimeter =2(this.x+this.y);
+console.log(perimeter);
+return perimeter;
+}
+}
+class sqaure extends shape{
+
+constructor(x,y,edges,name){
+    super(x,y,edges);
+    this.name=name;
+}
+
+area(){
+
+    var area= this.x*this.y;
+    console.log(area);
+    return area;
+    
+}
+
+perimeter(){
+
+
+var perimeter =2(this.x+this.y);
+console.log(perimeter);
+return perimeter;
+}
+}
+
+
+
+let shape1 = new shape(2,3,4);
+let triangle1 = new triangle(2,8,3,"t1");
+console.log(shape1.area());
+console.log(triangle1.area());
+console.log(triangle1.perimeter());
+console.log(triangle1.name);
+
+
+
+
+</script>
+
+<body>
+ <p id="p">
+
+ </p>
+</body>
+</html>
